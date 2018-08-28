@@ -6,6 +6,10 @@ public class Solution {
 	*Do not modify this main function.
 	*@param args is an argument
 	*/
+	protected Solution() { }
+	/**
+	*Need to write the rootsOfQuadraticEquation function and print the output.
+	*/
 	public static void main(final String[]  args) {
 		Scanner scan = new Scanner(System.in);
 		int a = scan.nextInt();
