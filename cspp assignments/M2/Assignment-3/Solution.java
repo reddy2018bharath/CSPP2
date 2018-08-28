@@ -1,6 +1,7 @@
 import java.util.Scanner;
-/*This is comment.
-*/
+/**
+*This is comment.
+**/
 
 final class Solution {
     /**
