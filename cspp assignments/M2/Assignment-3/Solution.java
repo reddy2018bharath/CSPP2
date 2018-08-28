@@ -9,10 +9,9 @@ final class Solution {
     */
     private Solution() { }
     /**
-     * { function_description }
-     *
-     * @param      args  The arguments
-     */
+    * { function_description }.
+    * @param args  The arguments
+    */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int base = s.nextInt();
@@ -24,10 +23,9 @@ final class Solution {
     Need to write the power function and print the output.
     */
     /**
-     * { function_description }
-     *
-     * @param      base      The base
-     * @param      exponent  The exponent
+    * { function_description }.
+    * @param      base      The base
+    * @param      exponent  The exponent
      *
      * @return     { description_of_the_return_value }
      */
