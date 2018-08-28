@@ -1,4 +1,7 @@
 import java.util.Scanner;
+    /**
+    *Do not modify this main function.
+    */
 public class Solution {
     /**
     *Do not modify this main function.
@@ -30,4 +33,4 @@ public class Solution {
         System.out.println(r1 + " " + r2);
     }
 }
-   
+  
