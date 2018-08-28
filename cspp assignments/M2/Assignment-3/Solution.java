@@ -1,5 +1,6 @@
 import java.util.Scanner;
-/*This is comment.*/
+/*This is comment.
+*/
 
 final class Solution {
     /**
@@ -29,8 +30,7 @@ final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static long power(final int base,final int exponent)
-    {
+    public static long power(final int base, final int exponent) {
         if (exponent == 0) {
             return 1;
         } else if (exponent == 1) {
