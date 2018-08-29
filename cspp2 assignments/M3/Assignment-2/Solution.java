@@ -10,17 +10,17 @@ public class Solution {
  */
     public static void main(String[] args) {
 
-        Scanner s=new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);      
         int n = s.nextInt();
-        int c=0, k;
+        int c = 0, k;
         for (int i=1;i<=n;i++) {
         	int j = i;
-        	while (j>0) {
-        	k=j%10;
-        	if (k==7 ) {
-        		c=c+1;
+        	while (j > 0) {
+        	k = j%10;
+        	if (k == 7 ) {
+        		c = c+1;
         	}
-        	j=j/10;
+        	j = j/10;
         }
 
         }
