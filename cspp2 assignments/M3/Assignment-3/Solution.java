@@ -19,12 +19,13 @@ public class Solution {
 		int r = 1;
 		while (r > 0) {
 			r = n1 % n2;
-			n1 = n2;
-			n2 = r;
 			if (r == 0) {
 				return n2;
 			}
 
+			n1 = n2;
+			n2 = r;
+			
 		}
 		return 1;
 	}
