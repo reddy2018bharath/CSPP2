@@ -13,7 +13,7 @@ public class Solution {
         Scanner s = new Scanner(System.in);      
         int n = s.nextInt();
         int c = 0, k;
-        for (int i=1;i<=n;i++) {
+        for (int i = 1; i <= n; i++) {
         	int j = i;
         	while (j > 0) {
         	k = j%10;
