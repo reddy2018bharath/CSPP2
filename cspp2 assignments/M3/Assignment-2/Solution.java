@@ -12,22 +12,18 @@ public class Solution {
 
         Scanner s = new Scanner(System.in);      
         int n = s.nextInt();
+        int d = 10;
         int c = 0, k;
         for (int i = 1; i <= n; i++) {
         	int j = i;
         	while (j > 0) {
-        	k = j%10;
+        	k = j % 10;
         	if (k == 7 ) {
-        		c = c+1;
+        		c = c + 1;
         	}
-        	j = j/10;
+        	j = j / d;
         }
-
-        }
-       
-        System.out.println(c);
-      }
-        
-       
-        
-    }
+       }
+     System.out.println(c);
+   }
+  }
