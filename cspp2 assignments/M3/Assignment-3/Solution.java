@@ -20,20 +20,20 @@ public final class Solution {
 
     public static void main(final String[] args) {
 
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
         int n2 = s.nextInt();
-        System.out.println(gcd(n1,n2));
+        System.out.println(gcd(n1, n2));
     }
     /**
      * { function_description }.
      *
-     * @param      n1    The n 1
-     * @param      n2    The n 2
+     * @param      m1    The m1
+     * @param      m2    The m2
      *
      * @return     { description_of_the_return_value }
      */
-    public static int gcd(final int m1,final int m2) {
+    public static int gcd(final int m1, final int m2) {
         int n1 = m1;
         int n2 = m2;
         int r = 1;
@@ -43,7 +43,7 @@ public final class Solution {
                 return n2;
             }
             n1 = n2;
-            n2 = r; 
+            n2 = r;
         }
         return 1;
     }
