@@ -30,3 +30,4 @@ private Solution() {
         System.out.println(k);
     }
 }
+
