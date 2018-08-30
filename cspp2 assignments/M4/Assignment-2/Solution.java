@@ -36,7 +36,8 @@ private Solution() {
             }
         }
         if (a != d && b != e) {
-            System.out.println("not possible"); }
+            System.out.println("not possible"); 
+            }
         else {
             int[][] g = new int[a][b];
             int i = 0;
