@@ -13,7 +13,7 @@ private Solution() {
 
 }
 /**
- * { function_description }
+ * { function_description }.
  *
  * @param      args  The arguments
  */
@@ -37,8 +37,7 @@ private Solution() {
         }
         if (a != d && b != e) {
             System.out.println("not possible");
-        }
-        else {
+        } else {
             int[][] g = new int[a][b];
             int i = 0;
             int j = 0;
