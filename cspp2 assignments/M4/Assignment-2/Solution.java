@@ -33,7 +33,16 @@ public class Solution {
 
 			}
 		}
-		System.out.println(g[i][j]);
+		for (i = 0; i < a; i++) {
+				for (j = 0; j<b; j++) {
+					System.out.print(g[i][j]);
+					if (j != b-1) {
+						System.out.print(" ");
+					}
+					System.out.println();
+
+			}
+		}
 	}
    }
  }
