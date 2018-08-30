@@ -1,11 +1,11 @@
 /**
  * { item_description }.
  */
-import java.util.*;
+import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
 /**
  * { item_description }.
  */
@@ -44,7 +44,7 @@ private Solution() {
 			int j = 0;
 			for (i = 0; i < a; i++) {
 				for (j = 0; j < b; j++) {
-					g[i][j]=c[i][j] + f[i][j];
+					g[i][j] = c[i][j] + f[i][j];
 
 			}
 		}
