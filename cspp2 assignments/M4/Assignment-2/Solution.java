@@ -15,8 +15,8 @@ public class Solution {
 		int d = sc.nextInt();
 		int e = sc .nextInt();
 		int[][] f = new int[d][e];
-		for (int i = 0; i < a; i++) {
-			for (int j = 0; j<b; j++) {
+		for (int i = 0; i < d; i++) {
+			for (int j = 0; j<e; j++) {
 				f[i][j] = sc.nextInt();
 			}
 		}
@@ -25,11 +25,11 @@ public class Solution {
 		}
 		else {
 			int[][] g = new int[a][b];
-		int i = 0;
-		int j = 0;
-		for (i = 0; i < a; i++) {
-			for (j = 0; j<b; j++) {
-				 g[i][j]=c[i][j] + f[i][j];
+			int i = 0;
+			int j = 0;
+			for (i = 0; i < a; i++) {
+				for (j = 0; j<b; j++) {
+					g[i][j]=c[i][j] + f[i][j];
 
 			}
 		}
