@@ -43,15 +43,15 @@ private Solution() {
 			int i = 0;
 			int j = 0;
 			for (i = 0; i < a; i++) {
-				for (j = 0; j<b; j++) {
+				for (j = 0; j < b; j++) {
 					g[i][j]=c[i][j] + f[i][j];
 
 			}
 		}
 		for (i = 0; i < a; i++) {
-				for (j = 0; j<b; j++) {
+				for (j = 0; j < b; j++) {
 					System.out.print(g[i][j]);
-					if (j != b-1) {
+					if (j != b - 1) {
 						System.out.print(" ");
 					}
 			}
