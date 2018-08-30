@@ -39,9 +39,8 @@ public class Solution {
 					if (j != b-1) {
 						System.out.print(" ");
 					}
-					System.out.println();
-
 			}
+			System.out.println();
 		}
 	}
    }
