@@ -19,7 +19,7 @@ public class Solution
 		}
 	}
 		public static int binaryToDecimal(String a) {
-			int d = Integer.parseInt(a);
+			Long d = Long.parseLong(a);
 			double r = 0;
 			double digit = 0;
 			int c = a.length();
