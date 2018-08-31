@@ -19,7 +19,7 @@ public class Solution
 	}
 		public static int binaryToDecimal(String a) {
 			double d = Integer.parseInt(a);
-			double res = 0;
+			double r = 0;
 			double digit = 0;
 			int c = a.length();
 			for (int i = 0; i < c; i++) {
@@ -28,12 +28,12 @@ public class Solution
 			digit = d % 10;
 			d = d / 10;
 			f = digit *(Math.pow(2,i));
-			res = res + f;
+			r = r + f;
 
 				}
 			}
 			
-			int g = (int)res;
+			int g = (int)r;
 			return g;
 		}
 	}
