@@ -31,7 +31,8 @@ public final class Solution {/*
             //Long d = Long.parseLong(a);
             int total = 0, value =0;
             int c = a.length();
-            for (int i = 0; i < c; i++) {
+            ;
+            for (int i = 0; i < a.length(); i++) {
                 if (a.charAt(i) == '1' || a.charAt(i) == '0') {
               value = Character.getNumericValue(a.charAt(i));
               total += value*Math.pow(2, c-1);
