@@ -1,18 +1,30 @@
-
-// Given an String, Write a java method that returns the decimal value for the given binary string.
+/**
+ * { item_description }.
+ */
 import java.util.Scanner;
+/**
+ * Class for solution.
+ */
 public class Solution
 {/*
 	Do not modify this main function.
 	*/
-	public static void main(String[] args)
-	{
-		Scanner sc=new Scanner(System.in);
-		int n= sc.nextInt();
+	private Solution() {
+
+	}
+/**
+ * { function_description }
+ *
+ * @param      args  The arguments.
+ */
+	public static void main(final String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
 		sc.nextLine();
-		for(int i=0;i<n;i++){
-			String s=sc.next();
-			String res=binaryToDecimal(s);//Write binaryToDecimal function
+		for(int i = 0; i < n; i++){
+			String s = sc.next();
+			String res = binaryToDecimal(s);//Write binaryToDecimal function
 			System.out.println(res);
 		}
 	}
@@ -22,11 +34,11 @@ public class Solution
 			double digit = 0;
 			int c = a.length();
 			for (int i = 0; i < c; i++) {
-				if (a.charAt(i)=='1' || a.charAt(i)=='0') {
+				if (a.charAt(i) == '1' || a.charAt(i) == '0') {
 					double f = 0;
 			digit = d % 10;
 			d = d / 10;
-			f = digit *(Math.pow(2,i));
+			f = digit * (Math.pow(2,i));
 			r = r + f;
 
 				}
