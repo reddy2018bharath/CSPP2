@@ -14,11 +14,11 @@ public class Solution
 		sc.nextLine();
 		for(int i=0;i<=n;i++){
 			String s=sc.nextLine();
-			int res=binaryToDecimal(s);//Write binaryToDecimal function
+			String res=binaryToDecimal(s);//Write binaryToDecimal function
 			System.out.println(res);
 		}
 	}
-		public static int binaryToDecimal(String a) {
+		public static String binaryToDecimal(String a) {
 			Long d = Long.parseLong(a);
 			double r = 0;
 			double digit = 0;
@@ -35,7 +35,7 @@ public class Solution
 			}
 			
 			int g = (int)r;
-			return g;
+			return String.valueOf(g);
 		}
 	}
 
