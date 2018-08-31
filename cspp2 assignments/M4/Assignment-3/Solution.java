@@ -23,13 +23,20 @@ public final class Solution {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         sc.nextLine();
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             String s = sc.next();
             String res = binaryToDecimal(s);
             System.out.println(res);
         }
     }
-        static String binaryToDecimal(String a) {
+/**
+ * { function_description }.
+ *
+ * @param      a     { parameter_description }
+ *
+ * @return     { description_of_the_return_value }
+ */
+        static String binaryToDecimal(final String a) {
             int total = 0, value = 0;
             int c = a.length();
             for (int i = 0; i < a.length(); i++) {
