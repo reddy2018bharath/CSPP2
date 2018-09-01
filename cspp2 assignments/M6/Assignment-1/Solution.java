@@ -21,15 +21,15 @@ public final class Solution {
 
     	
     	for (int i = 2; i < n; i++) {
-    		int count1;
+    		int count1 = 0;
     		int count2;
-    		if (n%i != 0) {
-    			 count1 = 1;
+    		if (n%i == 0) {
+    			 count1 += 1;
     		
     		if (i % 2 != 0) {
     			 count2 = 1;
             
-            if (count1 ==1  && count2 == 1) {
+            if (count1 !=1  && count2 == 1) {
             	System.out.println(i);
 
             }
