@@ -26,8 +26,8 @@ final class Solution {
 
 	// write ypur code here
         for (int i = 0; i < rows; i++) {
-            float d = 100;
-            int e = 100;
+            final float d = 100;
+            final int e = 100;
             for (int j = 0; j < columns; j++) {
                 float b = a[i][j]/d;
                 int c = Math.round(b);
