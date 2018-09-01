@@ -27,8 +27,8 @@ final class Solution {
 	// write ypur code here
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                double b = a[i][j]/100f;
-                long c = Math.round(b);
+                float b = a[i][j]/100f;
+                int c = Math.round(b);
                 c = c*100;
                 c=a[i][j];
 
