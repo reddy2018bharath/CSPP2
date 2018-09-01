@@ -26,11 +26,13 @@ final class Solution {
 
 	// write ypur code here
         for (int i = 0; i < rows; i++) {
+            float d = 100;
+            int e = 100;
             for (int j = 0; j < columns; j++) {
-                float b = a[i][j]/100f;
+                float b = a[i][j]/d;
                 int c = Math.round(b);
-                c = c*100;
-                a[i][j]=c;
+                c = c * e;
+                a[i][j] = c;
 
             }
         }return a;
