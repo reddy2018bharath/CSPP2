@@ -18,30 +18,28 @@ public final class Solution {
      * @param      n     n value
      */
     static void oddComposites(final int n) {
+    	int a =0;
+    	int b;
+    	final int c = 3;
+    	for (int i=3; i < n; i++) {
+    		if (i % 2 !=0) {
+    			for (int j = 2; j <=i/2; j++) {
+    				if (i%j == 0) {
+    					a +=1;
+    					if (a >= 1) {
+    						System.out.println(i);
+
+    				}
+    					}
+    			}
+    		}
+    	}
+    }
 
     	
-    	for (int i = 2; i < n; i++) {
-    		int count1 = 0;
-    		int count2;
-    		if (n%i == 0) {
-    			 count1 += 1;
-    		
-    		if (i % 2 != 0) {
-    			 count2 = 1;
-            
-            if (count1 !=1  && count2 == 1) {
-            	System.out.println(i);
+    	
 
-            }
-        }
-    }
-    		
-    		
-          
-          
-          		
-          	}
-          }
+     
 
     	
 	// write your code here
