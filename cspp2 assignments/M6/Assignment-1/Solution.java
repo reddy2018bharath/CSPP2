@@ -22,9 +22,9 @@ public final class Solution {
     	int b;
     	for (int i = 2; i < n; i++) {
     		if (i % 2 != 0) {
-    			for (int j = 2; j <=i/2; j++) {
+    			for (int j = 2; j <= i/2; j++) {
     				if (i%j == 0) {
-    					a +=1;
+    					a += 1;
     					if (a >= 1) {
     						System.out.println(i);
     						break;
