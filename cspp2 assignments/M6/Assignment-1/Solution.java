@@ -28,6 +28,7 @@ public final class Solution {
     					a +=1;
     					if (a >= 1) {
     						System.out.println(i);
+    						break;
 
     				}
     					}
