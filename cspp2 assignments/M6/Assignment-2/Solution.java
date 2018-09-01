@@ -30,7 +30,7 @@ final class Solution {
                 float b = a[i][j]/100f;
                 int c = Math.round(b);
                 c = c*100;
-                c=a[i][j];
+                a[i][j]=c;
 
             }
         }return a;
