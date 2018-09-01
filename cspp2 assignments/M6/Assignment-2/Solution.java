@@ -29,15 +29,14 @@ final class Solution {
             final float d = 100;
             final int e = 100;
             for (int j = 0; j < columns; j++) {
-                float b = a[i][j]/d;
+                float b = a[i][j] / d;
                 int c = Math.round(b);
                 c = c * e;
                 a[i][j] = c;
 
             }
-        }return a;
-	
-    }
+        } return a;
+	}
     /**
      * Main function.
      *
