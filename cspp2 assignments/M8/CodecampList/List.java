@@ -70,6 +70,9 @@ public class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
+    /**
+     * Constructs the object.
+     */
     public List() {
         final int ten = 10;
         int a = ten;
@@ -136,7 +139,7 @@ public class List {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index >= 0 && index < size) {
-            for (int i = index; i < size - 1; i++ ) {
+            for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
             list[size - 1] = 0;
@@ -224,7 +227,7 @@ public class List {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
