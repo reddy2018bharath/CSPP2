@@ -71,7 +71,8 @@ public class List {
      * class variables with some default values.
      */
     public List() {
-        int a = 10;
+        final int ten = 10;
+        int a = ten;
 
         // what are the two variables to be initialized here?
         // think about the private variables described above.
@@ -104,7 +105,7 @@ public class List {
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         list[size] = item;
         size++;
@@ -116,6 +117,11 @@ public class List {
      * to the objects outside the list
      *
      * The method returns an int. Empty list should return 0.
+     */
+    /**
+     * { function_description }.
+     *
+     * @return     { description_of_the_return_value }
      */
     public int size() {
         // replace the code below to implement the size method
@@ -180,7 +186,14 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    public boolean contains(int item) {
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public boolean contains(final int item) {
         // Replace the code below
         return indexOf(item) >= 0;
     }
@@ -190,16 +203,27 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int indexOf(final int item) {
         // Replace the code below
-        for (int i = 0; i < size ; i++ ) {
-            if(list[i] == item) {
+        for (int i = 0; i < size; i++ ) {
+            if (list[i] == item) {
                 return i;
             }
         }
         return -1;
     }
-
+    /**
+     * main.
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
@@ -240,6 +264,8 @@ public class List {
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+                default :
                 break;
             }
         }
