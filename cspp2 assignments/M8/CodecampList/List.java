@@ -35,7 +35,7 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-    
+
     private int[] list;
 
     /*
@@ -132,7 +132,7 @@ public class List {
  *
  * @param      index  The index
  */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index >= 0 && index < size) {
@@ -153,7 +153,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
         if (index > -1 && index < size) {
             return list[index];
@@ -170,9 +170,9 @@ public class List {
         // Replace the code below
         String str = "[";
         String cmm = ",";
-        for (int i = 0; i < size ; i++) {
+        for (int i = 0; i < size; i++) {
             str += Integer.toString(list[i]);
-            if(i < size - 1) {
+            if (i < size - 1) {
                 str += cmm;
             }
         }
@@ -212,7 +212,7 @@ public class List {
      */
     public int indexOf(final int item) {
         // Replace the code below
-        for (int i = 0; i < size; i++ ) {
+        for (int i = 0; i < size; i++) {
             if (list[i] == item) {
                 return i;
             }
