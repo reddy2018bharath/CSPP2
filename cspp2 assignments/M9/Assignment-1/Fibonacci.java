@@ -1,3 +1,6 @@
+/**
+ * { item_description }.
+ */
 import java.util.Scanner;
 
 /*
@@ -17,6 +20,9 @@ import java.util.Scanner;
  *
  */
 
+/**
+ * Class for fibonacci.
+ */
 public class Fibonacci
 {
     /*
@@ -26,6 +32,13 @@ public class Fibonacci
      *
      * Look for the hint.txt if some of the testcases fail.
      */
+    /**
+     * { function_description }.
+     *
+     * @param      n     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public static List fib(int n) {
         List a = new List(n);
         int n1 = 0;
@@ -33,7 +46,7 @@ public class Fibonacci
         a.add(n1);
         a.add(n2);
         for (int i = 2; i < n; i++) {
-            int total = n1 +n2;
+            int total = n1 + n2;
             n1 = n2;
             n2 = total;
             a.add(total);
@@ -42,7 +55,12 @@ public class Fibonacci
         return a;
     }
 
-	public static void main(String[] args) {
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments.
+     */
+    public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         System.out.println(fib(n));
