@@ -38,7 +38,7 @@ import java.util.Scanner;
      *
      * @return     { description_of_the_return_value }
      */
-    public static List fib(final int n) {
+     static List fib(final int n) {
         List a = new List(n);
         int n1 = 0;
         int n2 = 1;
