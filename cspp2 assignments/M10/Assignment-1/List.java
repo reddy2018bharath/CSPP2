@@ -55,7 +55,7 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
+     *
      */
     /**
      * { var_description }.
@@ -69,8 +69,6 @@ public class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
-    
-    
 /**
  * Constructs the object.
  */
@@ -78,13 +76,14 @@ public class List {
     /**
      * { item_description }.
      */
+    int a = 10;
 
         // what are the two variables to be initialized here?
         // think about the private variables described above.
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        list = new int[a];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -101,22 +100,21 @@ public class List {
      * There will be some clients of the ADT that will require
      * the list to contain n elements which is known
      * at the time of creating the list.
-     * 
+     *
      * The overloaded constructor is a way to initialize a list with
      * a list capacity of n items where n is given as an argument to
      * constructor.
-     * 
+     *
      */
     /**
      * Constructs the object.
      *
      * @param      capacity  The capacity
      */
-    public List(int capacity) {
+    public List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
-    
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -126,7 +124,7 @@ public class List {
      * Think about how you can use the size variable to add item
      * to the list.
      * 
-     * The method returns void (nothing)
+     * The method returns void (nothing).
      */
     /**
      * { function_description }
@@ -143,7 +141,6 @@ public class List {
         list[size++] = item;
         } 
     }
-
     /*
      *
      * Resize the list
@@ -182,7 +179,6 @@ public class List {
         System.arraycopy(list, 0, newlist, 0, size);
         list = newlist;
     }
-
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
@@ -193,12 +189,11 @@ public class List {
     /**
      * { function_description }.
      *
-     * @return     { description_of_the_return_value }
+     * @return     { description_of_the_return_value }.
      */
     public int size() {
         return size;
     }
-
     /*
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
@@ -263,7 +258,6 @@ public class List {
             return list[index];
         }
     }
-
     /*
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally
@@ -300,7 +294,6 @@ public class List {
         str = str + list[i] + "]";
         return str;
     }
-    
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -317,7 +310,6 @@ public class List {
     public boolean contains(int item) {
         return indexOf(item) == -1;
     }
-
     /*
      * Returns the index of the first occurrence 
      * of the specified element in this list,
@@ -345,11 +337,8 @@ public class List {
     public void addAll(int items[]) {
         for(int i = 0; i < items.length; i++) {
             add(items[i]);
-
-        }
-     
+        } 
     }
-
      /* 
         Inserts the specified element at the specified index 
     by moving all the elements to the right.
@@ -366,7 +355,6 @@ public class List {
         if (index >=0) {
         for (int i = size; i > index; i--) {
             list[i] = list[i-1];
-
         }
         list[index] = item;
         size++;
@@ -375,7 +363,6 @@ public class List {
         System.out.println("Negative Index Exception");
     }
     }
-    
     /* Returns the count of occurances of a given item in the list*/
     /**
      * { function_description }
@@ -396,7 +383,6 @@ public class List {
         }
         return a;
     }
-
     /**
      * { function_description }
      *
@@ -464,8 +450,7 @@ public class List {
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
-               
-            }
+               }
         }
     }
 }
