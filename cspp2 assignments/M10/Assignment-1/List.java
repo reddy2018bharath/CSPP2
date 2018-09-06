@@ -1,8 +1,13 @@
+/**
+ * { item_description }.
+ */
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-
+/**
+ * List of .
+ */
 public class List {
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
 
     /*
      * The goal for the list is to store items.
@@ -112,8 +117,8 @@ public class List {
     public void add(int item) {
         //Inserts the specified element at the end of the zelist.
         if (size == list.length) {
-        	resize();
-        	add(item);
+            resize();
+            add(item);
         }
         else {
         list[size++] = item;
@@ -153,9 +158,9 @@ public class List {
 
     // todo create resize method
     private void resize() {
-    	int[] newlist = new int[2 * list.length];
-    	System.arraycopy(list, 0, newlist, 0, size);
-    	list = newlist;
+        int[] newlist = new int[2 * list.length];
+        System.arraycopy(list, 0, newlist, 0, size);
+        list = newlist;
     }
 
     /*
@@ -280,30 +285,30 @@ public class List {
     array to the end of list*/
     
     public void addAll(int items[]) {
-    	for(int i = 0; i < items.length; i++) {
-    		add(items[i]);
+        for(int i = 0; i < items.length; i++) {
+            add(items[i]);
 
-    	}
+        }
      
     }
 
      /* 
         Inserts the specified element at the specified index 
-	by moving all the elements to the right.
+    by moving all the elements to the right.
         The method returns void (nothing)
      */
     public void add(int index,int item) {
          // write the logic 
-    	if (index >=0) {
-    	for (int i = size; i > index; i--) {
-    		list[i] = list[i-1];
+        if (index >=0) {
+        for (int i = size; i > index; i--) {
+            list[i] = list[i-1];
 
-    	}
-    	list[index] = item;
-    	size++;
+        }
+        list[index] = item;
+        size++;
     }
     else {
-    	System.out.println("Negative Index Exception");
+        System.out.println("Negative Index Exception");
     }
     }
     
@@ -311,18 +316,18 @@ public class List {
     public int count(int item)
     {
          // write the logic 
-    	int a = 0;
-    	for (int i = 0; i < size; i++) {
-    		if (list[i] == item) {
-    			a ++;
-    		}
+        int a = 0;
+        for (int i = 0; i < size; i++) {
+            if (list[i] == item) {
+                a ++;
+            }
 
-    	}
+        }
         return a;
     }
 
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -387,5 +392,5 @@ public class List {
                
             }
         }
-	}
+    }
 }
