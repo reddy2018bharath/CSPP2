@@ -294,7 +294,7 @@ public class List {
      */
     public void add(int index,int item) {
          // write the logic 
-    	if (index >=0 && index < size) {
+    	if (index >=0) {
     	for (int i = size; i > index; i--) {
     		list[i] = list[i-1];
 
