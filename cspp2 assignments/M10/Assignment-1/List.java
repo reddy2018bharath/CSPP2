@@ -301,7 +301,7 @@ public class List {
      * the item exists and otherwise false
      */
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      item  The item
      *
@@ -311,7 +311,7 @@ public class List {
         return indexOf(item) == -1;
     }
     /*
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
@@ -320,7 +320,7 @@ public class List {
      *
      * @param      item  The item
      *
-     * @return     { description_of_the_return_value }
+     * @return     { description_of_the_return_value }.
      */
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
@@ -330,34 +330,32 @@ public class List {
         }
         return -1;
     }
-   /*Inserts all the elements of specified int
-    array to the end of list*/
     /**
-     * { item_description }
-     */
-    public void addAll(int items[]) {
+     * { item_description }.
+ */
+    public void addAll(final int items[]) {
         for (int i = 0; i < items.length; i++) {
             add(items[i]);
         } 
     }
-     /* 
-        Inserts the specified element at the specified index 
+     /*
+        Inserts the specified element at the specified index
     by moving all the elements to the right.
         The method returns void (nothing)
      */
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      index  The index
      * @param      item   The item
      */
     public void add(int index,int item) {
          // write the logic 
-        if (index >=0) {
+        if (index >= 0) {
         for (int i = size; i > index; i--) {
-            list[i] = list[i-1];
+            list[i] = list[i - 1];
         }
-        list[index] = item;
+        list[index] = item; 
         size++;
     }
     else {
@@ -366,30 +364,29 @@ public class List {
     }
     /* Returns the count of occurances of a given item in the list*/
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      item  The item
      *
      * @return     { description_of_the_return_value }
      */
-    public int count(int item)
-    {
+    public int count(final int item) {
          // write the logic 
         int a = 0;
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
-                a ++;
+                a++;
             }
 
         }
         return a;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
