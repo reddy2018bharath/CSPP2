@@ -154,7 +154,7 @@ public class List {
     // todo create resize method
     private void resize() {
     	int[] newlist = new int[2 * list.length];
-    	System.arraycopy(list, 0, newlist,0, size);
+    	System.arraycopy(list, 0, newlist, 0, size);
     	list = newlist;
     }
 
@@ -294,20 +294,22 @@ public class List {
      */
     public void add(int index,int item) {
          // write the logic 
-    	for (int i =size; i > index; i--) {
+    	if (index >=0 && index < size) {
+    	for (int i = size; i > index; i--) {
     		list[i] = list[i-1];
 
     	}
     	list[index] = item;
     	size++;
     }
+    }
     
     /* Returns the count of occurances of a given item in the list*/
     public int count(int item)
     {
          // write the logic 
-    	int a =0;
-    	for (int i =0; i < size; i++) {
+    	int a = 0;
+    	for (int i = 0; i < size; i++) {
     		if (list[i] == item) {
     			a ++;
     		}
@@ -332,13 +334,13 @@ public class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                case "add":
-                if((tokens.length)==2){
+                if((tokens.length) == 2){
                 String[] t = tokens[1].split(",");
-                if(t.length==1){
+                if(t.length == 1){
                     l.add(Integer.parseInt(tokens[1]));
                 }
                 else{
-                    if(t.length>1)
+                    if(t.length > 1)
                         l.add(Integer.parseInt(t[0]),Integer.parseInt(t[1]));
                     }
                 }
@@ -347,11 +349,11 @@ public class List {
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;
                 case "addAll":
-                if(tokens.length==2){
+                if(tokens.length == 2){
                 String[] t1 = tokens[1].split(",");
-                int temp[]=new int[t1.length];
-                for(int i=0;i<temp.length;i++)
-                    temp[i]=Integer.parseInt(t1[i]);
+                int temp[] = new int[t1.length];
+                for(int i = 0;i < temp.length;i++)
+                    temp[i] = Integer.parseInt(t1[i]);
                 l.addAll(temp);
                 }
                 break;
