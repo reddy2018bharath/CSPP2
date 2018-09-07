@@ -62,7 +62,7 @@ public class List {
      * some default values.
      */
     public List() {
-    	list = new int[20];
+    	list = new int[30];
     	size = 0;
 
         // what are the two variables to be initialized here? think about the
@@ -240,7 +240,7 @@ public class List {
     // write the logic for subList
     	List newlist = new List();
     	if (start > end || start < 0 || end < 0) {
-    		System.out.println("IndexOutOfBoundsException");
+    		System.out.println("Index Out Of Bounds Exception");
     		return null;
     	}
     	for (int i = start; i < end; i++) {
