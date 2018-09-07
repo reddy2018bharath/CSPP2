@@ -285,6 +285,7 @@ public class List {
         for (int i = 0; i < size; i++) {
         	if (list[i] == newArray[j]) {
         		remove(i);
+        		i--;
         	}
         }
        }
@@ -308,7 +309,7 @@ public class List {
     public List subList(int start, int end) {
     // write the logic for subList
     	List newlist = new List();
-    	if (start > end || start < 0 || end < 0) {
+    	if (start > end || start < 0 || end < 0 || start == end || end > size) {
     		System.out.println("Index Out of Bounds Exception");
     		return null;
     	}
