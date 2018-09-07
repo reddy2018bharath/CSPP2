@@ -266,8 +266,7 @@ public class List {
     {
         // write the logic
         for (int i = 0; i < size; i++) {
-        	list[size] = newArray[i];
-        	size++;
+        	add(newArray[i]);
         }
     }
     /*
@@ -281,12 +280,14 @@ public class List {
       */
      public void removeAll(int[] newArray)
      {
-        // write the logic 
+        // write the logic
+        for (int j =0; j < newArray.length; j++) { 
         for (int i = 0; i < size; i++) {
-        	if (list[i] == newArray[i]) {
+        	if (list[i] == newArray[j]) {
         		remove(i);
         	}
         }
+       }
 
      }
     /*
