@@ -9,8 +9,8 @@ import java.util.Arrays;
 class Set {
     //your code goes here...
     //Good luck :-)
-    private int[] list;
-    private int size;
+        private int[] list;
+        private int size;
     public Set() {
     	final int a = 30;
     	list = new int[a];
@@ -19,14 +19,12 @@ class Set {
     public void add(final int item) {
     	if (size == 0) {
     		list[size++] = item;
-    	}
-    	for (int i =0; i < size; i++) {
-    		if (list[i] != item) {
-    			list[size++] = item;
-    		}
-    		else if (size == 0) {
-    			list[size++] = item;
-    		}
+    	} else {
+	    	for (int i = 0; i < size; i++) {
+	    		if (!(contains(item))) {
+	    			list[size++] = item;
+	    		}
+	    	}
     	}
     }
     public int size() {
@@ -46,15 +44,13 @@ class Set {
     }
     public boolean contains(final int item) {
         // Replace the code below
-        for (int i =0; i < size; i++) {
+        for (int i = 0; i < size; i++) {
             if (list[i] == item) {
                 return true;
             }
             
         }
         return false;
-
-
 }
     public void add(int[] newArray) {
         // write the logic
@@ -62,7 +58,8 @@ class Set {
             add(newArray[i]);
         }
     }
-    /**public Set intersection(Set S1) {
+    /*
+    public Set intersection(Set S1) {
     	Set newlist = new Set();
     	int[] arr1 = new int[S1.size()];
     	for (int elements : S1) {
@@ -91,10 +88,7 @@ class Set {
         }
         return none;
     }
-  
-    }
-
-
+}
 /**
  * Solution class for code-eval.
  */
@@ -191,3 +185,7 @@ public final class Solution {
         }
     }
 }
+
+
+ 
+
