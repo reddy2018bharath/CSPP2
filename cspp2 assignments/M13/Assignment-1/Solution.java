@@ -59,7 +59,7 @@ class Set {
             add(newArray[i]);
         }
     }
-    public Set intersection(Set S1) {
+    /**public Set intersection(Set S1) {
     	Set newlist = new Set();
     	int[] arr1 = new int[S1.size()];
     	for (int elements : S1) {
@@ -75,8 +75,10 @@ class Set {
         }
         
         }
+        */
     public Set retainAll(int[] newarray) {
     	Set none = new Set();
+    	Set d = new Set();
     	for(int i=0;i<newarray.length; i++) {
             for(int j=0; j < list.length; j++){
                 if(newarray[i] == list[j]) {
@@ -85,9 +87,11 @@ class Set {
                 return none;
             }
         }
+        return d;
       
 
     }
+  
     }
 
 
@@ -155,7 +159,7 @@ public final class Solution {
                     s.add(intArray);
                 }
                 break;
-                case "intersection":
+                /**case "intersection":
                 s = new Set();
                 Set t = new Set();
                 intArray = intArray(tokens[1]);
@@ -163,7 +167,7 @@ public final class Solution {
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
                 System.out.println(s.intersection(t));
-                break;
+                break;*/
                 case "retainAll":
                 s = new Set();
                 intArray = intArray(tokens[1]);
@@ -171,7 +175,7 @@ public final class Solution {
                 intArray = intArray(tokens[2]);
                 System.out.println(s.retainAll(intArray));
                 break;
-                case "cartesianProduct":
+                /**case "cartesianProduct":
                 s = new Set();
                 t = new Set();
                 intArray = intArray(tokens[1]);
@@ -179,7 +183,7 @@ public final class Solution {
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
                 System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
-                break;
+                break;*/
                 default:
                 break;
             }
