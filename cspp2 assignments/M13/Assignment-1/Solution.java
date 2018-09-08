@@ -83,6 +83,20 @@ class Set {
         }
         return none;
     }
+    public int[][] cartesianProduct(Set t) {
+    	if (size == 0 || t.size() == 0) {
+    		return null;
+    	}
+    	int[][] arr = new int[size * t.size()][2];
+    	int k = 0;
+    	for (int i = 0;i < size;i++) {
+    		for (int j = 0; j<t.size();j++) {
+    			arr[k][0] = list[i];
+    			arr[k++][1] = t.list[i];
+    		}
+    	}
+    	return arr;
+    }
 }
 /**
  * Solution class for code-eval.
