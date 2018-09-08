@@ -59,8 +59,6 @@ public class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
-    
-
     private int size;
     /**
      * { to create a list of size 30 }.
@@ -88,7 +86,6 @@ public class List {
         // An empty list has how many items?
         // That is the initial value to use for size.
     }
-    
     /*
      * The add method does what the name suggests. Add an int item to the list.
      * The assumption is to store the item at the end of the list What is the
@@ -147,7 +144,7 @@ public class List {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         if (index >= 0 && index < size) {
-            for (int i = index; i < size -1; i++) {
+            for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
             size--;
@@ -226,14 +223,12 @@ public class List {
      */
     public boolean contains(final int item) {
         // Replace the code below
-        for (int i =0; i < size; i++) {
+        for (int i = 0; i < size; i++) {
             if (list[i] == item) {
                 return true;
             }
-            
         }
         return false;
-
     }
     /*
      * Returns the index of the first occurrence of the specified element in
@@ -256,15 +251,14 @@ public class List {
         return -1;
     }
     /*
-    Inserts all the elements of specified int array to the end of list    
+    Inserts all the elements of specified int array to the end of list
     */
     /**
      * Adds all.
      *
      * @param      newArray  The new array
      */
-    public void addAll(int[] newArray)
-    {
+    public void addAll(final int[] newArray) {
         // write the logic
         for (int i = 0; i < newArray.length; i++) {
             add(newArray[i]);
@@ -290,8 +284,7 @@ public class List {
             }
         }
        }
-
-     }
+    }
     /*
     Returns a list object containing elements, including startIndex and
     excluding endIndex. The first parameter indicates the startIndex and the
@@ -330,13 +323,12 @@ public class List {
      *
      * @return     { return value is of  boolean type}.
      */
-    public boolean equals(List newlist) {
+    public boolean equals(final List newlist) {
     // Replace the code below
     if (Arrays.equals(newlist.list, list)) {
         return true;
     }
     return false;
-    
     }
     /*
     * Removes all the elements from list
@@ -350,18 +342,15 @@ public class List {
     // write the logic for clear.
     removeAll(list);
     size = 0;
-
-    }
+}
     /**
      * { main function}.
      *
      * @param      args  The arguments
      */
-
     public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
-
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         // check if there is one more line to process
