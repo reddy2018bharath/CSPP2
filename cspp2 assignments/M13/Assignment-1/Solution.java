@@ -81,7 +81,7 @@ class Set {
         
     public Set retainAll(int[] newarray) {
     	Set none = new Set();
-    	for(int i=0;i<list.length; i++) {
+    	for(int i=0;i<size; i++) {
             for(int j=0; j < newarray.length; j++){
                 if(newarray[j] == list[i]) {
                     none.add(list[i]);
