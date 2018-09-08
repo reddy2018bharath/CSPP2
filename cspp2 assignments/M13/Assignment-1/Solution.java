@@ -17,6 +17,9 @@ class Set {
     	size = 0;
     }
     public void add(final int item) {
+    	if (size == 0) {
+    		list[size++] = item;
+    	}
     	for (int i =0; i < size; i++) {
     		if (list[i] != item) {
     			list[size++] = item;
@@ -74,15 +77,14 @@ class Set {
             }
         }
         
-        }
-        */
+        }*/
+        
     public Set retainAll(int[] newarray) {
     	Set none = new Set();
-    	Set d = new Set();
     	for(int i=0;i<newarray.length; i++) {
             for(int j=0; j < list.length; j++){
                 if(newarray[i] == list[j]) {
-                    none.add(list[i]);
+                    none.add(list[j]);
                 }
                 
             }
@@ -165,7 +167,7 @@ public final class Solution {
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
                 System.out.println(s.intersection(t));
-                break;*/
+                break;**/
                 case "retainAll":
                 s = new Set();
                 intArray = intArray(tokens[1]);
@@ -173,7 +175,8 @@ public final class Solution {
                 intArray = intArray(tokens[2]);
                 System.out.println(s.retainAll(intArray));
                 break;
-                /**case "cartesianProduct":
+                /**
+                case "cartesianProduct":
                 s = new Set();
                 t = new Set();
                 intArray = intArray(tokens[1]);
@@ -181,7 +184,7 @@ public final class Solution {
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
                 System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
-                break;*/
+                break;**/
                 default:
                 break;
             }
