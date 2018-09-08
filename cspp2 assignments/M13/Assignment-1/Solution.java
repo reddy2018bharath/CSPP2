@@ -58,23 +58,18 @@ class Set {
             add(newArray[i]);
         }
     }
-    /*
+    
     public Set intersection(Set S1) {
     	Set newlist = new Set();
-    	int[] arr1 = new int[S1.size()];
-    	for (int elements : S1) {
-    		arr1[i++]=elements;
-    	}
-    	for(int i=0;i<arr1.length; i++) {
-            for(int j=0; j < list.length; j++){
-                if(arr1[i] == list[j]) {
+    	for(int i=0; i<size; i++) {
+            for(int j=0; j < S1.list.length; j++){
+                if(list[i] == S1.list[j]) {
                     newlist.add(list[i]);
                 }
-                return newlist;
             }
-        }
+        }return newlist;
         
-        }*/
+        }
         
     public Set retainAll(int[] newarray) {
     	Set none = new Set();
