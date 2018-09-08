@@ -84,7 +84,7 @@ class Set {
                 if(newarray[i] == list[j]) {
                     none.add(list[i]);
                 }
-                return none;
+                
             }
         }
         return none;
