@@ -92,7 +92,7 @@ class Set {
     	for (int i = 0;i < size;i++) {
     		for (int j = 0; j<t.size();j++) {
     			arr[k][0] = list[i];
-    			arr[k++][1] = t.list[i];
+    			arr[k++][1] = t.list[j];
     		}
     	}
     	return arr;
