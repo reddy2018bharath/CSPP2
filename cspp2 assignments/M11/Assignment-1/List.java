@@ -265,18 +265,17 @@ public class List {
         }
     }
     /*
-     Removes all of its elements that are contained in the specified int 
-     array.    
+     Removes all of its elements that are contained in the specified int
+     array.
     */
      /**
       * Removes all.
       *
       * @param      newArray  The new array
       */
-     public void removeAll(int[] newArray)
-     {
+     public void removeAll(final int[] newArray) {
         // write the logic
-        for (int j = 0; j < newArray.length; j++) { 
+        for (int j = 0; j < newArray.length; j++) {
         for (int i = 0; i < size; i++) {
             if (list[i] == newArray[j]) {
                 remove(i);
@@ -288,7 +287,7 @@ public class List {
     /*
     Returns a list object containing elements, including startIndex and
     excluding endIndex. The first parameter indicates the startIndex and the
-    second parameter indicates the endIndex. Returns null and print 
+    second parameter indicates the endIndex. Returns null and print
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
     */
@@ -348,7 +347,7 @@ public class List {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
         // code to read the test cases input file
@@ -422,7 +421,7 @@ public class List {
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(arrstring3[0]),
                             Integer.parseInt(arrstring3[1]));
-                    if (object != null)   
+                    if (object != null)
                         System.out.println(object);
                     break;
                 }
