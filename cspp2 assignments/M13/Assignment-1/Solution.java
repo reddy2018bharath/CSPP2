@@ -67,9 +67,9 @@ class Set {
                     newlist.add(list[i]);
                 }
             }
-        }return newlist;
-        
         }
+        return newlist;
+    }
         
     public Set retainAll(int[] newarray) {
     	Set none = new Set();
