@@ -87,9 +87,7 @@ class Set {
                 return none;
             }
         }
-        return d;
-      
-
+        return none;
     }
   
     }
