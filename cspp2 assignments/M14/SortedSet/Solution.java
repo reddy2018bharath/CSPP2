@@ -1,5 +1,5 @@
 /**
- * { item_description }
+ * { item_description }.
  */
 import java.io.BufferedInputStream;
 import java.util.Scanner;
@@ -23,7 +23,7 @@ class SortedSet extends Set {
  * @return     { return value is of type integer array}
  */
     public int[] subSet(final int fromElement, final int toElement) {
-        final int h =10;
+        final int h = 10;
         int[] array = new int[h];
         if (fromElement > toElement) {
             System.out.println("Invalid Arguments to Subset Exception");
@@ -46,7 +46,7 @@ class SortedSet extends Set {
  * @return     { the return value is of the integer array}
  */
     public int[] headSet(final int toElement) {
-        int g = 10;
+        final int g = 10;
         int[] arr = new int[g];
         int count = 0;
         for (int i = 0, j = 0; i < size; i++) {
@@ -58,7 +58,7 @@ class SortedSet extends Set {
         return Arrays.copyOf(arr, count);
     }
 /**
- * { function to print last item in the set.}
+ * { function to print last item in the set}.
  *
  * @return     { return value is of the type int}
  */
@@ -107,6 +107,9 @@ class SortedSet extends Set {
         }
     }
 }
+/**
+ * { item_description }.
+ */
 public final class Solution {
     /**
      * Constructs the object.
