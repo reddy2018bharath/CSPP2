@@ -23,7 +23,7 @@ class SortedSet extends Set {
  * @return     { return value is of type integer array}
  */
     public int[] subSet(final int fromElement, final int toElement) {
-        int h =10;
+        final int h =10;
         int[] array = new int[h];
         if (fromElement > toElement) {
             System.out.println("Invalid Arguments to Subset Exception");
