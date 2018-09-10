@@ -1,18 +1,35 @@
+/**
+ * { item_description }
+ */
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Class for sorted set.
+ */
 class SortedSet extends Set {
+/**
+ * Constructs the object.
+ */
 	public SortedSet() {
 
 	}
-	public int[] subSet(int fromElement, int toElement) {
+/**
+ * { function to return the subset array }.
+ *
+ * @param      fromElement  The from element
+ * @param      toElement    To element
+ *
+ * @return     { return value is of type integer array}
+ */
+	public int[] subSet(final int fromElement, final int toElement) {
 		int[] array = new int[10];
 		if(fromElement > toElement) {
 			System.out.println("Invalid Arguments to Subset Exception");
 			return null;
 		}
 		int count = 0;
-		for(int i =0, j = 0; i < size; i++) {
+		for(int i = 0, j = 0; i < size; i++) {
 			if(set[i] >= fromElement && set[i] < toElement) {
 				array[j++] = set[i];
 				count++;
@@ -20,10 +37,17 @@ class SortedSet extends Set {
 		}
 		return Arrays.copyOf(array, count);
 	}
-	public int[] headSet(int toElement) {
+/**
+ * { function to the return integer array before the element }.
+ *
+ * @param      toElement  To element
+ *
+ * @return     { the return value is of the integer array}
+ */
+	public int[] headSet(final int toElement) {
 		int[] arr = new int[10];
 		int count = 0;
-		for(int i =0, j = 0; i < size; i++) {
+		for(int i = 0, j = 0; i < size; i++) {
 			if(set[i] < toElement) {
 				arr[j++] = set[i];
 				count++;
@@ -31,6 +55,11 @@ class SortedSet extends Set {
 		}
 		return Arrays.copyOf(arr, count);
 	}
+/**
+ * { function to print last item in the set.}
+ *
+ * @return     { return value is of the type int}
+ */
 	public int last() {
 		if(size != 0) {
 			return set[size - 1];
@@ -38,17 +67,27 @@ class SortedSet extends Set {
 		System.out.println("Set Empty Exception");
 		return -1;
 	}
-	public void addAll(int[] ar) {
+/**
+ * Adds all.
+ *
+ * @param      ar    The archive
+ */
+	public void addAll(final int[] ar) {
 		for(int i: ar) {
 			add(i);
 		}
 	}
 	@Override
-	public void add(int element) {
+/**
+ * { function to add the elements and sorting the set.}
+ *
+ * @param      element  The element
+ */
+	public void add(final int element) {
 		int index = 0;
 		int i;
 		if (!(contains(element))) {
-			for(i =0; i < size; i++) {
+			for(i = 0; i < size; i++) {
 				if(set[i] > element) {
 					index = i;
 					break;
