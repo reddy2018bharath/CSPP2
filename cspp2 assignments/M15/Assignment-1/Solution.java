@@ -342,15 +342,6 @@ public class List {
     removeAll(list);
     size = 0;
 }
-    public int count(final int item) {
-         // write the logic
-        int c = 0;
-        for (int i = 0; i < size; i++) {
-            if (list[i] == item) {
-                c++;
-            }
-        } return c;
-    }
     /**
      * { main function}.
      *
