@@ -127,7 +127,7 @@ class SortedSet extends Set {
             int i;
             for (i = 0; i < size(); i++) {
                 if (get(i) > ele) {
-                    index = i + 1;
+                    index = i;
                     break;
                 }
             }
