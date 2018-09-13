@@ -1,7 +1,10 @@
 /**
  * { item_description }
  */
-import java.util.*;
+import java.util.Scanner;
+import java.io.BufferedInputStream;
+import java.util.Arrays;
+import java.util.ArrayList;
 
 /**
  * Class for solution.
@@ -231,7 +234,7 @@ class BookYourShow {
 
 
         if (flag) {
-            ticketList.add(patron.getMobile()+" "+movie+" "+showTime);
+            ticketList.add(patron.getMobile() + " " + movie + " " + showTime);
         }
         // System.out.println(ticketList);
     }
@@ -243,7 +246,7 @@ class BookYourShow {
  * @param      mobile    The mobile
  */
     void printTicket(String movie, String showTime, String mobile) {
-        String t = mobile+" "+movie+" "+showTime;
+        String t = mobile + " " + movie + " " + showTime;
         if (ticketList.contains(t))
             System.out.println(t);
         else
