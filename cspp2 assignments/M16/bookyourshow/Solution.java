@@ -1,3 +1,6 @@
+/**
+ * { item_description }
+ */
 import java.util.*;
 
 /**
@@ -66,82 +69,151 @@ public final class Solution {
         }
     }
 }
-
+/**
+ * Class for show.
+ */
 class Show {
     private String movie;
     private String showTime;
     private String[] seats;
-
+/**
+ * Constructs the object.
+ *
+ * @param      movie     The movie
+ * @param      showTime  The show time
+ * @param      seats     The seats
+ */
     Show (String movie, String showTime, String[] seats) {
         this.movie = movie;
         this.showTime = showTime;
         this.seats = seats;
     }
-
+/**
+ * Gets the movie.
+ *
+ * @return     The movie.
+ */
     String getMovie() {
         return movie;
     }
-
+/**
+ * Gets the show time.
+ *
+ * @return     The show time.
+ */
     String getShowTime() {
         return showTime;
     }
 
-
+/**
+ * Gets the seats.
+ *
+ * @return     The seats.
+ */
     String[] getSeats()  {
         return seats;
     }
-
+/**
+ * Sets the seat na.
+ *
+ * @param      index  The index
+ */
     void setSeatNA(int index) {
         seats[index] = "N/A";
     }
-
+/**
+ * Returns a string representation of the object.
+ *
+ * @return     String representation of the object.
+ */
     public String toString() {
         return movie + "," + showTime;
     }
 }
-
+/**
+ * Class for patron.
+ */
 class Patron {
     private String name;
     private String mobile;
-
+/**
+ * Constructs the object.
+ *
+ * @param      name    The name
+ * @param      mobile  The mobile
+ */
     Patron (String name, String mobile) {
         this.name = name;
         this.mobile = mobile;
     }
-
+/**
+ * Gets the name.
+ *
+ * @return     The name.
+ */
     String getName() {
         return name;
     }
-
+/**
+ * Gets the mobile.
+ *
+ * @return     The mobile.
+ */
     String getMobile() {
         return mobile;
     }
-
+/**
+ * Returns a string representation of the object.
+ *
+ * @return     String representation of the object.
+ */
     public String toString() {
         return name + " " + mobile;
     }
 }
-
+/**
+ * Class for book your show.
+ */
 class BookYourShow {
     ArrayList<Show> showList;
     ArrayList<String> ticketList;
-
+/**
+ * Constructs the object.
+ */
     BookYourShow() {
         showList = new ArrayList<>();
         ticketList = new ArrayList<>();
     }
-
+/**
+ * Adds a show.
+ *
+ * @param      show  The show
+ */
     void addAShow(Show show) {
         showList.add(show);
     }
-
+/**
+ * Gets a show.
+ *
+ * @param      movie     The movie
+ * @param      showTime  The show time
+ *
+ * @return     A show.
+ */
     Show getAShow(String movie, String showTime) {
         for (Show show : showList)
             if (show.getMovie().equals(movie) && show.getShowTime().equals(showTime))
                 return show;
         return null;
     }
-
+/**
+ * { function_description }
+ *
+ * @param      movie     The movie
+ * @param      showTime  The show time
+ * @param      patron    The patron
+ * @param      seats     The seats
+ */
     void bookAShow(String movie, String showTime, Patron patron, String[] seats) {
         Show show = getAShow(movie, showTime);
         if (show == null) {
@@ -163,7 +235,13 @@ class BookYourShow {
         }
         // System.out.println(ticketList);
     }
-
+/**
+ * { function_description }
+ *
+ * @param      movie     The movie
+ * @param      showTime  The show time
+ * @param      mobile    The mobile
+ */
     void printTicket(String movie, String showTime, String mobile) {
         String t = mobile+" "+movie+" "+showTime;
         if (ticketList.contains(t))
@@ -171,7 +249,9 @@ class BookYourShow {
         else
             System.out.println("Invalid");
     }
-
+/**
+ * Shows all.
+ */
     void showAll() {
         for (Show show : showList)
             System.out.println(show.toString() + "," + Arrays.toString(show.getSeats()).replace(" ",""));
