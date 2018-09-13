@@ -218,9 +218,11 @@ class BookYourShow {
  * @return     A show.
  */
     Show getAShow(final String movie, final String showTime) {
-        for (Show show : showList)
-            if (show.getMovie().equals(movie) && show.getShowTime().equals(showTime))
+        for (Show show : showList) {
+            if (show.getMovie().equals(movie) && show.getShowTime().equals(showTime)) {
                 return show;
+            }
+        }
         return null;
     }
 /**
@@ -239,38 +241,41 @@ class BookYourShow {
         }
         boolean flag = false;
         String[] sseats = show.getSeats();
-        for (String seat : seats)
-            for (int i = 0; i < sseats.length; i++)
+        for (String seat : seats) {
+            for (int i = 0; i < sseats.length; i++) {
                 if (seat.equals(sseats[i])) {
                     show.setSeatNA(i);
                     flag = true;
                 }
-
-
+            }
+        }
         if (flag) {
             ticketList.add(patron.getMobile() + " " + movie + " " + showTime);
         }
         // System.out.println(ticketList);
     }
 /**
- * { function_description }
+ * function_description.
  *
  * @param      movie     The movie
  * @param      showTime  The show time
  * @param      mobile    The mobile
  */
-    void printTicket(final String movie, final String showTime, final String mobile) {
+void printTicket(final String movie, final String showTime, final String mobile) {
         String t = mobile + " " + movie + " " + showTime;
-        if (ticketList.contains(t))
+        if (ticketList.contains(t)) {
             System.out.println(t);
-        else
+        } else {
             System.out.println("Invalid");
+        }
     }
 /**
  * Shows all.
  */
     void showAll() {
-        for (Show show : showList)
-            System.out.println(show.toString() + "," + Arrays.toString(show.getSeats()).replace(" ",""));
+        for (Show show : showList) {
+            System.out.println(show.toString() + "," + Arrays.toString(
+                show.getSeats()).replace(" ", ""));
+        }
     }
 }
