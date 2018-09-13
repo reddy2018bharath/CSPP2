@@ -2,7 +2,6 @@
  * { item_description }
  */
 import java.util.Scanner;
-import java.io.BufferedInputStream;
 import java.util.Arrays;
 import java.util.ArrayList;
 
@@ -76,8 +75,17 @@ public final class Solution {
  * Class for show.
  */
 class Show {
+/**
+ * { var_description }
+ */
     private String movie;
+/**
+ * { var_description }
+ */
     private String showTime;
+/**
+ * { var_description }
+ */
     private String[] seats;
 /**
  * Constructs the object.
@@ -86,7 +94,7 @@ class Show {
  * @param      showTime  The show time
  * @param      seats     The seats
  */
-    Show (String movie, String showTime, String[] seats) {
+    Show (final String movie, final String showTime, final String[] seats) {
         this.movie = movie;
         this.showTime = showTime;
         this.seats = seats;
@@ -121,7 +129,7 @@ class Show {
  *
  * @param      index  The index
  */
-    void setSeatNA(int index) {
+    void setSeatNA(final int index) {
         seats[index] = "N/A";
     }
 /**
@@ -145,7 +153,7 @@ class Patron {
  * @param      name    The name
  * @param      mobile  The mobile
  */
-    Patron (String name, String mobile) {
+    Patron (final String name, final String mobile) {
         this.name = name;
         this.mobile = mobile;
     }
@@ -203,7 +211,7 @@ class BookYourShow {
  *
  * @return     A show.
  */
-    Show getAShow(String movie, String showTime) {
+    Show getAShow(final String movie, final String showTime) {
         for (Show show : showList)
             if (show.getMovie().equals(movie) && show.getShowTime().equals(showTime))
                 return show;
@@ -217,7 +225,7 @@ class BookYourShow {
  * @param      patron    The patron
  * @param      seats     The seats
  */
-    void bookAShow(String movie, String showTime, Patron patron, String[] seats) {
+    void bookAShow(final String movie, final String showTime, final Patron patron, final String[] seats) {
         Show show = getAShow(movie, showTime);
         if (show == null) {
             System.out.println("No show");
@@ -245,7 +253,7 @@ class BookYourShow {
  * @param      showTime  The show time
  * @param      mobile    The mobile
  */
-    void printTicket(String movie, String showTime, String mobile) {
+    void printTicket(final String movie, final String showTime, final String mobile) {
         String t = mobile + " " + movie + " " + showTime;
         if (ticketList.contains(t))
             System.out.println(t);
