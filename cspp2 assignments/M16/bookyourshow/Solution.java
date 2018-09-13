@@ -192,6 +192,9 @@ class Patron {
  * Class for book your show.
  */
 class BookYourShow {
+    /**
+     * variables.
+     */
     ArrayList<Show> showList;
     ArrayList<String> ticketList;
 /**
@@ -206,7 +209,7 @@ class BookYourShow {
  *
  * @param      show  The show
  */
-    void addAShow(Show show) {
+    void addAShow(final Show show) {
         showList.add(show);
     }
 /**
@@ -219,21 +222,23 @@ class BookYourShow {
  */
     Show getAShow(final String movie, final String showTime) {
         for (Show show : showList) {
-            if (show.getMovie().equals(movie) && show.getShowTime().equals(showTime)) {
+            if (show.getMovie().equals(movie) && 
+                show.getShowTime().equals(showTime)) {
                 return show;
             }
         }
         return null;
     }
 /**
- * { function_description }
+ * function_description.
  *
  * @param      movie     The movie
  * @param      showTime  The show time
  * @param      patron    The patron
  * @param      seats     The seats
  */
-    void bookAShow(final String movie, final String showTime, final Patron patron, final String[] seats) {
+    void bookAShow(final String movie, final String showTime, 
+        final Patron patron, final String[] seats) {
         Show show = getAShow(movie, showTime);
         if (show == null) {
             System.out.println("No show");
@@ -261,7 +266,8 @@ class BookYourShow {
  * @param      showTime  The show time
  * @param      mobile    The mobile
  */
-void printTicket(final String movie, final String showTime, final String mobile) {
+void printTicket(final String movie, final String showTime, 
+    final String mobile) {
         String t = mobile + " " + movie + " " + showTime;
         if (ticketList.contains(t)) {
             System.out.println(t);
