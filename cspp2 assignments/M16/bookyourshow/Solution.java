@@ -76,15 +76,15 @@ public final class Solution {
  */
 class Show {
 /**
- * { var_description }
+ * var_description.
  */
     private String movie;
 /**
- * { var_description }
+ * var_description.
  */
     private String showTime;
 /**
- * { var_description }
+ * var_description.
  */
     private String[] seats;
 /**
@@ -94,7 +94,7 @@ class Show {
  * @param      showTime  The show time
  * @param      seats     The seats
  */
-    Show (final String movie, final String showTime, final String[] seats) {
+    Show(final String movie, final String showTime, final String[] seats) {
         this.movie = movie;
         this.showTime = showTime;
         this.seats = seats;
@@ -145,7 +145,13 @@ class Show {
  * Class for patron.
  */
 class Patron {
+/**
+ * { var_description }.
+ */
     private String name;
+/**
+ * { var_description }.
+ */
     private String mobile;
 /**
  * Constructs the object.
