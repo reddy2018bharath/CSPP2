@@ -75,11 +75,11 @@ public final class Solution {
     		 String line = s.nextLine();
     		 String[] tokens = line.split(":");
     		 //System.out.println(tokens);
-    		 /*for (int i =0; i < 5; i++) {
+    		 for (int i =0; i < 5; i++) {
     		 	if (tokens[i].length() == 0) {
     		 		System.out.println("Error! Malformed question");
     		 	}
-    		 }*/
+    		 }
     		 if (tokens[4].length() == 0) {
     		 	System.out.println("Error! Malformed question");
     		 }
@@ -92,7 +92,7 @@ public final class Solution {
     		 }
     		 
 
-    		 System.out.println(tokens[4].length());
+    		 //System.out.println(tokens[4].length());
     		 
     		 
     		 
