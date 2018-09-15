@@ -88,7 +88,7 @@ public final class Solution {
     		 	}
     		 }
 
-    		 System.out.println(tokens[0].length());
+    		 //System.out.println(tokens[0].length());
     		 if (tokens[0] == "") {
     		 	System.out.println("Error! Malformed question");
     		 }
