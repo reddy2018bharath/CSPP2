@@ -71,8 +71,7 @@ public final class Solution {
     }
     else {
     	int a = 0;
-    	while (questionCount > a) {
-    		s.nextLine();
+    	for (a = 0; a < questionCount; a++) {
     		 String line = s.nextLine();
     		 String[] tokens = line.split(":");
     		 System.out.println(tokens);
