@@ -92,11 +92,15 @@ public final class Solution {
     		 }
     		 final int e = 3;
     		 if (Integer.parseInt(tokens[e]) <= 0) {
-    		 	System.out.println("Invalid max marks for question about sony");
+    		 	System.out.println("Invalid max marks for question about"+ " " + tokens[0]);
     		 }
     		 if (Integer.parseInt(tokens[d]) > 0) {
-    		 	System.out.println("Invalid penalty for question about sony");
+    		 	System.out.println("Invalid penalty for question about"+ " " + tokens[0]);
     		 }
+    		 /*String[] array = tokens[2].split(" ");
+    		 if(array.length() < 2) {
+    		 	System.out.println();
+    		 }*/
     	}
     }
         
