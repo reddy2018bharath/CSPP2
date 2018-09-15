@@ -15,7 +15,7 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
-    public void main(final String[] args) {
+    public static void main(final String[] args) {
          // instantiate this Quiz
         Quiz q = new Quiz();
          // code to read the test cases input file
@@ -51,7 +51,7 @@ public final class Solution {
             }
         }
     }
-    class Quiz {
+    static class Quiz {
 
     }
     /**
