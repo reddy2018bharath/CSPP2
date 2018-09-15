@@ -65,9 +65,25 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        System.out.println(questionCount);
+        //System.out.println(questionCount);
         if (questionCount == 0) {
         System.out.println("Quiz does not have questions");
+    }
+    else {
+    	int a = 0;
+    	while (questionCount > a) {
+    		 String line = s.nextLine();
+    		 String[] tokens = line.split(":");
+    		 if (Integer.parseInt(tokens[3]) <= 0) {
+    		 	System.out.println("Invalid max marks for question about Sony");
+    		 }
+    		 if (Integer.parseInt(tokens[4]) > 0) {
+    		 	System.out.println("Invalid max marks for question about Sony");
+
+    		 }
+    		 
+
+    	}
     }
         
     }
