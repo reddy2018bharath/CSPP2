@@ -64,8 +64,8 @@ public final class Solution {
      * Loads questions.
      *
      * @param      s              The scanner object for user input
-     * @param      quiz           The quiz object
-     * @param      questionCount  The question count
+     * @param      q           The quiz object
+     * @param      qc  The question count
      */
     public static void lq(final Scanner s, final Quiz q, final int qc) {
         // write your code here to read the questions from the console
@@ -74,15 +74,14 @@ public final class Solution {
         //System.out.println(questionCount);
         if (qc == 0) {
         System.out.println("Quiz does not have questions");
-    }
-    else {
+    } else {
     	 int a = 0;
     	for (a = 0; a < qc; a++) {
     		 String line = s.nextLine();
     		 String[] tokens = line.split(":");
     		 //System.out.println(tokens);
     		 final int c = 5;
-    		 for (int i =0; i < c; i++) {
+    		 for (int i = 0; i < c; i++) {
     		 	if (tokens[i].length() == 0) {
     		 		System.out.println("Error! Malformed question");
     		 	}
@@ -97,15 +96,7 @@ public final class Solution {
     		 }
     		 if (Integer.parseInt(tokens[d]) > 0) {
     		 	System.out.println("Invalid penalty for question about sony");
-
     		 }
-    		 
-
-    		 //System.out.println(tokens[4].length());
-    		 
-    		 
-    		 
-
     	}
     }
         
