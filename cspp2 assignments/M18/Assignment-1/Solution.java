@@ -76,10 +76,10 @@ public final class Solution {
     		 String[] tokens = line.split(":");
     		 //System.out.println(tokens);
     		 if (Integer.parseInt(tokens[3]) <= 0) {
-    		 	System.out.println("Invalid max marks for question about Sony");
+    		 	System.out.println("Invalid max marks for question about sony");
     		 }
     		 if (Integer.parseInt(tokens[4]) > 0) {
-    		 	System.out.println("Invalid penalty for question about Sony");
+    		 	System.out.println("Invalid penalty for question about sony");
 
     		 }
     		 
