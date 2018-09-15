@@ -82,6 +82,9 @@ public final class Solution {
     		 	System.out.println("Invalid penalty for question about sony");
 
     		 }
+    		 if (tokens.length != 5) {
+    		 	System.out.println("Error! Malformed question");
+    		 }
     		 
 
     	}
