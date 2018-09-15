@@ -97,12 +97,14 @@ public final class Solution {
     		 if (Integer.parseInt(tokens[d]) > 0) {
     		 	System.out.println("Invalid penalty for"+ " " + tokens[0]);
     		 }
-    		 String[] array = tokens[2].split(",");
+    		 
+    }
+
+    /*String[] array = tokens[2].split(",");
     		 if(array.length < 2) {
     		 	System.out.println(tokens[0] + " " + "does not have enough answer choices");
-    		 }
+    		 }*/
     	}
-    }
         
     }
 
