@@ -72,6 +72,7 @@ public final class Solution {
     else {
     	int a = 0;
     	while (questionCount > a) {
+    		s.nextLine();
     		 String line = s.nextLine();
     		 String[] tokens = line.split(":");
     		 if (Integer.parseInt(tokens[3]) <= 0) {
