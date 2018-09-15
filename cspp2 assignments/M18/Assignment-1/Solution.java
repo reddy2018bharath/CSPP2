@@ -75,6 +75,7 @@ public final class Solution {
     		s.nextLine();
     		 String line = s.nextLine();
     		 String[] tokens = line.split(":");
+    		 System.out.println(tokens);
     		 if (Integer.parseInt(tokens[3]) <= 0) {
     		 	System.out.println("Invalid max marks for question about Sony");
     		 }
