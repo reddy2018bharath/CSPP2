@@ -51,7 +51,13 @@ public final class Solution {
             }
         }
     }
+    /**
+     * Class for quiz.
+     */
     static class Quiz {
+    	public Quiz() {
+
+    	}
 
     }
     /**
@@ -61,17 +67,17 @@ public final class Solution {
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
-    public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
+    public static void loadQuestions(final Scanner s, final Quiz quiz, final int qc) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         //System.out.println(questionCount);
-        if (questionCount == 0) {
+        if (qc == 0) {
         System.out.println("Quiz does not have questions");
     }
     else {
     	int a = 0;
-    	for (a = 0; a < questionCount; a++) {
+    	for (a = 0; a < qc; a++) {
     		 String line = s.nextLine();
     		 String[] tokens = line.split(":");
     		 //System.out.println(tokens);
