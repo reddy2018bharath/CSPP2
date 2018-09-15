@@ -76,22 +76,22 @@ public final class Solution {
         System.out.println("Quiz does not have questions");
     }
     else {
-    	int a = 0;
+    	 int a = 0;
     	for (a = 0; a < qc; a++) {
     		 String line = s.nextLine();
     		 String[] tokens = line.split(":");
     		 //System.out.println(tokens);
-    		 int c = 5;
+    		 final int c = 5;
     		 for (int i =0; i < c; i++) {
     		 	if (tokens[i].length() == 0) {
     		 		System.out.println("Error! Malformed question");
     		 	}
     		 }
-    		 int d = 4;
+    		 final int d = 4;
     		 if (tokens[d].length() == 0) {
     		 	System.out.println("Error! Malformed question");
     		 }
-    		 int e = 3;
+    		 final int e = 3;
     		 if (Integer.parseInt(tokens[e]) <= 0) {
     		 	System.out.println("Invalid max marks for question about sony");
     		 }
