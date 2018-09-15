@@ -32,7 +32,7 @@ public final class Solution {
                 System.out.println("|----------------|");
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
-                loadQuestions(s, q, Integer.parseInt(tokens[1]));
+                lq(s, q, Integer.parseInt(tokens[1]));
                 break;
                 case "START_QUIZ":
                 System.out.println("|------------|");
@@ -67,7 +67,7 @@ public final class Solution {
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
-    public static void loadQuestions(final Scanner s, final Quiz quiz, final int qc) {
+    public static void lq(final Scanner s, final Quiz q, final int qc) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
@@ -81,18 +81,21 @@ public final class Solution {
     		 String line = s.nextLine();
     		 String[] tokens = line.split(":");
     		 //System.out.println(tokens);
-    		 for (int i =0; i < 5; i++) {
+    		 int c = 5;
+    		 for (int i =0; i < c; i++) {
     		 	if (tokens[i].length() == 0) {
     		 		System.out.println("Error! Malformed question");
     		 	}
     		 }
-    		 if (tokens[4].length() == 0) {
+    		 int d = 4;
+    		 if (tokens[d].length() == 0) {
     		 	System.out.println("Error! Malformed question");
     		 }
-    		 if (Integer.parseInt(tokens[3]) <= 0) {
+    		 int e = 3;
+    		 if (Integer.parseInt(tokens[e]) <= 0) {
     		 	System.out.println("Invalid max marks for question about sony");
     		 }
-    		 if (Integer.parseInt(tokens[4]) > 0) {
+    		 if (Integer.parseInt(tokens[d]) > 0) {
     		 	System.out.println("Invalid penalty for question about sony");
 
     		 }
