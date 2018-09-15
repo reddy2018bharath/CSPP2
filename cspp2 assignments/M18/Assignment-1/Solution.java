@@ -82,6 +82,7 @@ public final class Solution {
     		 }
     		 if (tokens[4].length() == 0) {
     		 	System.out.println("Error! Malformed question");
+    		 }
     		 if (Integer.parseInt(tokens[3]) <= 0) {
     		 	System.out.println("Invalid max marks for question about sony");
     		 }
@@ -93,7 +94,7 @@ public final class Solution {
 
     		 //System.out.println(tokens[0].length());
     		 
-    		 }
+    		 
     		 
 
     	}
