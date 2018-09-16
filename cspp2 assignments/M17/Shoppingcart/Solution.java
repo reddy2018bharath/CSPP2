@@ -58,7 +58,7 @@ class ShoppingCart{
             for (int j = 0; j < catalogcount; j++) {
                 if(catalog[j].getName().equals(item.getName()) && cart[i].getName().equals(item.getName())){
                     cart[i].setQuantity(cart[i].getQuantity() + item.getQuantity());
-                    flag = 0;
+                    flag = 1;
                 }
             }
         }
