@@ -86,15 +86,15 @@ public final class Solution {
     		 		System.out.println("Error! Malformed question");
     		 	}
     		 }
-    		 final int d = 4;
-    		 if (tokens[d].length() == 0) {
+    		// final int d = 4;
+    		 if (tokens.length != 5) {
     		 	System.out.println("Error! Malformed question");
     		 }
     		 final int e = 3;
     		 if (Integer.parseInt(tokens[e]) <= 0) {
     		 	System.out.println("Invalid max marks for"+ " " + tokens[0]);
     		 }
-    		 if (Integer.parseInt(tokens[d]) > 0) {
+    		 if (Integer.parseInt(tokens[4]) > 0) {
     		 	System.out.println("Invalid penalty for"+ " " + tokens[0]);
     		 }
     		 String[] array = tokens[1].split(",");
