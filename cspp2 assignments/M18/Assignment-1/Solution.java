@@ -98,6 +98,7 @@ public final class Solution {
     		 	System.out.println("Invalid penalty for"+ " " + tokens[0]);
     		 }
     		 String[] array = tokens[2].split(",");
+    		 System.out.println(array.length);
     		 if(array.length < 2) {
     		 	System.out.println(tokens[0] + " " + "does not have enough answer choices");
     		 }
