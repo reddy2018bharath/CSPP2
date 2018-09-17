@@ -87,7 +87,7 @@ public final class Solution {
     		 	}
     		 }
     		// final int d = 4;
-    		 System.out.println(tokens.length);
+    		 //System.out.println(tokens.length);
     		 if (tokens.length != 5) {
     		 	System.out.println("Error! Malformed question");
     		 }
