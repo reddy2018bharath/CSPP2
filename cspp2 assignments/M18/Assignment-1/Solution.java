@@ -102,7 +102,7 @@ public final class Solution {
     		 if(array.length < 2) {
     		 	System.out.println(tokens[0] + " " + "does not have enough answer choices");
     		 }
-    		 if (Integer.parseInt(tokens[3]) > 4 || Integer.parseInt(tokens[3]) < 1) {
+    		 if (Integer.parseInt(tokens[2]) > 4 || Integer.parseInt(tokens[2]) < 1) {
     		 	System.out.println("Error! Correct answer choice number is out of range for" + " " + tokens[0]);
     		 }
     		 
