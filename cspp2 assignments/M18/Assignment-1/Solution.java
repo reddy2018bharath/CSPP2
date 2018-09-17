@@ -95,7 +95,7 @@ public final class Solution {
     		 if (Integer.parseInt(tokens[e]) <= 0) {
     		 	System.out.println("Invalid max marks for"+ " " + tokens[0]);
     		 }
-    		 if (Integer.parseInt(tokens[4]) > 0) {
+    		 if (tokens.length == 5 && Integer.parseInt(tokens[4]) > 0) {
     		 	System.out.println("Invalid penalty for"+ " " + tokens[0]);
     		 }
     		 String[] array = tokens[1].split(",");
