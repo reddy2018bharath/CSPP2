@@ -80,7 +80,7 @@ public final class Solution {
     		 String line = s.nextLine();
     		 String[] tokens = line.split(":");
     		 //System.out.println(tokens);
-    		 final int c = 5;
+    		 final int c = 4;
     		 for (int i = 0; i < c; i++) {
     		 	if (tokens[i].length() == 0) {
     		 		System.out.println("Error! Malformed question");
