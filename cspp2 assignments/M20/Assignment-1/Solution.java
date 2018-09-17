@@ -295,7 +295,7 @@ public final class Solution {
         final int three = 3;
         final int four = 4;
         final int five = 5;
-        if (q <= one) {
+        if (q < one) {
             System.out.println("Quiz does not have questions");
             flag = false;
             return;
@@ -374,3 +374,5 @@ public final class Solution {
         System.out.println(quiz.showReport());
     }
 }
+
+
