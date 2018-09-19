@@ -1,0 +1,4 @@
+getConnections Mercedes
+addConnections Mercedes,John
+getConnections Mercedes
+getCommonConnections John,Walter
