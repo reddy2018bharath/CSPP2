@@ -8,11 +8,7 @@ public class Solution
 	}
   public static void main(String[] args) throws Exception 
   { 
-    // pass the path to the file as a parameter 
     AddUser u = new AddUser();
-    /*File file = 
-      new File("C:\\Users\\Zone\\Desktop\\my practise\\testcase.txt"); */
-/*    Scanner sc = new Scanner(file);*/
     Scanner scan = new Scanner(System.in);
     String[] cnt = scan.nextLine().split(" ");
     for (int i = 0; i < Integer.parseInt(cnt[1]); i++) {
@@ -46,7 +42,6 @@ public class Solution
 }
 }
 
-/*C:\\Users\\Zone\\Desktop\\CSPP-2-assignments\\assignments\\m22\\SocialNetwork.txt*/
 
 class AddUser {
 	private int size;
@@ -187,4 +182,3 @@ class User {
 		return str;
 	}
 }
-/*Arrays.toString(connectedNames)*/
