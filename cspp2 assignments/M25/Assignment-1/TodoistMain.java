@@ -20,11 +20,7 @@ class Task {
         this.status = status;
     }
     public String gettitle() {
-        try {
         return this.title;
-    } catch (NullPointerException e) {
-        return "Title not provided";
-    }
     }
     public String getassignedTo() {
         return this.assignedTo;
@@ -51,10 +47,14 @@ class Task {
         Task t = new Task();
     }*/
     public String toString() 
-    { 
-        return gettitle() +","+ " " + getassignedTo() +","+ " " + gettimeToComplete() +","+ " " + getimportant() +","+ " " + geturgent()+","+ " " + getstatus(); 
+    { if (gettitle().length() == 0) {
+        return "TITLE NOT PROVIDED";
+    }
+        return gettitle() +","+ " " + getassignedTo() +","+ " " + gettimeToComplete() +","+ " " + getimportant() +","+ " " + geturgent()+","+ " " + getstatus();
+    }
+
     } 
-}
+
 class Todoist {
     public Todoist() {
 
