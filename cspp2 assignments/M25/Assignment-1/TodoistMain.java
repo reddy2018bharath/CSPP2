@@ -28,18 +28,18 @@ class Task {
     public int gettimeToComplete() {
         return this.timeToComplete;
     }
-    /*public boolean getimportant() {
-        if (this.important == y) {
+    public String getimportant() {
+        if (this.important == true) {
             return "Important";
         }
         return "Not Important";
-    }*/
-    /*public boolean geturgent() {
-        if (this.urgent == y) {
+    }
+    public String geturgent() {
+        if (this.urgent == true) {
             return "Urgent";
         }
         return "Not Urgent";
-    }*/
+    }
     public String getstatus() {
         return this.status;
     }
