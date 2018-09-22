@@ -48,7 +48,7 @@ class Task {
     }*/
     public String toString() 
     { 
-        return title + " " + assignedTo + " " + timeToComplete + " " + important + " " + urgent+ " " + status; 
+        return gettitle() + " " + getassignedTo() + " " + gettimeToComplete() + " " + getimportant() + " " + geturgent()+ " " + getstatus(); 
     } 
 }
 class Todoist {
