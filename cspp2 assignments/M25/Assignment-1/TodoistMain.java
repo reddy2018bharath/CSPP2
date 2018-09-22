@@ -20,6 +20,9 @@ class Task {
         this.status = status;
     }
     public String gettitle() {
+        if (gettitle().length() == 0) {
+        return "Title Not Provided";
+    }
         return this.title;
     }
     public String getassignedTo() {
@@ -47,9 +50,9 @@ class Task {
         Task t = new Task();
     }*/
     public String toString() 
-    { if (gettitle().length() == 0) {
+    { /*if (gettitle().length() == 0) {
         return "Title Not Provided";
-    }
+    }*/
         return gettitle() +","+ " " + getassignedTo() +","+ " " + gettimeToComplete() +","+ " " + getimportant() +","+ " " + geturgent()+","+ " " + getstatus();
     }
 
