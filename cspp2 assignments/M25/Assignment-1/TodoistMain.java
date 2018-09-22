@@ -51,7 +51,7 @@ class Task {
         return "Title not provided";
     }
     if (gettimeToComplete() <0) {
-        return "Invalid time to complete" +" "+ gettimeToComplete();
+        return "Invalid timeToComplete" +" "+ gettimeToComplete();
     } else {
         return gettitle() +","+ " " + getassignedTo() +","+ " " + gettimeToComplete() +","+ " " + getimportant() +","+ " " + geturgent()+","+ " " + getstatus();
     }
