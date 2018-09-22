@@ -20,7 +20,11 @@ class Task {
         this.status = status;
     }
     public String gettitle() {
+        try {
         return this.title;
+    } catch (NullPointerException e) {
+        return "Title not provided";
+    }
     }
     public String getassignedTo() {
         return this.assignedTo;
@@ -80,8 +84,8 @@ public class TodoistMain {
                 break;
                 case "print-todoist":
                     System.out.println(todo);
-                break;*/
-                /*case "get-next":
+                break;
+                case "get-next":
                     System.out.println(todo.getNextTask(tokens[1]));
                 break;
                 case "get-next-n":
@@ -144,6 +148,7 @@ public class TodoistMain {
         return new Task(
             title, assignedTo, timeToComplete, important, urgent, status);
     }
+    
 
     /**
      * main method.
