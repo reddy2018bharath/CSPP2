@@ -20,7 +20,7 @@ class Task {
         this.status = status;
     }
     public String gettitle() {
-        if (gettitle().length() == 0) {
+        if (this.title.length() == 0) {
         return "Title Not Provided";
     }
         return this.title;
