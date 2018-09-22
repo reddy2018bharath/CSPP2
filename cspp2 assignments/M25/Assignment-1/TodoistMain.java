@@ -50,10 +50,14 @@ class Task {
     { if (gettitle().length() == 0) {
         return "Title not provided";
     }
+    if (gettimeToComplete() <0) {
+        return "Invalid time to complete";
+    } else {
         return gettitle() +","+ " " + getassignedTo() +","+ " " + gettimeToComplete() +","+ " " + getimportant() +","+ " " + geturgent()+","+ " " + getstatus();
     }
-
-    } 
+}
+    
+    }
 
 class Todoist {
     public Todoist() {
