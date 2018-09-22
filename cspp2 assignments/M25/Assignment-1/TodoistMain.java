@@ -46,6 +46,10 @@ class Task {
     /*public String toString() {
         Task t = new Task();
     }*/
+    public String toString() 
+    { 
+        return title + " " + assignedTo + " " + timeToComplete + " " + important + " " + urgent+ " " + status; 
+    } 
 }
 class Todoist {
     public Todoist() {
