@@ -52,9 +52,9 @@ class Task {
     }
     if (gettimeToComplete() <0) {
         return "Invalid timeToComplete" +" "+ gettimeToComplete();
-    } /*if (getstatus() != "todo" || getstatus() !="done") {
+    } if (getstatus().length() != 4) {
         return "Invalid status" + " "+getstatus();
-    }*/
+    }
     else {
         return gettitle() +","+ " " + getassignedTo() +","+ " " + gettimeToComplete() +","+ " " + getimportant() +","+ " " + geturgent()+","+ " " + getstatus();
     }
