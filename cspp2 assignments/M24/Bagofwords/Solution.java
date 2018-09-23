@@ -7,7 +7,7 @@ import java.util.HashMap;
  */
 class Bagofwords {
     /**
-     * { var_description }.
+     * { variable of type hashmap }.
      */
     private  HashMap<String, Integer>dictionary;
     /**
@@ -17,7 +17,7 @@ class Bagofwords {
         dictionary = new HashMap<>();
     }
     /**
-     * { function_description }.
+     * { function of bag of words }.
      *
      * @return     { description_of_the_return_value }
      */
