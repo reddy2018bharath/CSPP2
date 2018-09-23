@@ -1,49 +1,59 @@
 import java.util.Scanner;
 import java.io.File;
-class SubString1 {
-    String str1 = "";
-    String str2 = "";
-    double result;
-    SubString1() {
-    }
-    public double plagerism(File file1, File file2) {
+/**
+ * solution - main class.
+ */
+public final  class Solution {
+    /**
+     * Class for solution.
+     */
+    private Solution() { };
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         try {
-            Scanner scan = new Scanner(file1);
-            while (scan.hasNext()) {
-                str1 += scan.nextLine();
+            Scanner linescan = new Scanner(System.in);
+
+            String file = linescan.nextLine();
+            //System.out.println(file);
+            File new1 = new File(file);
+            File[] text = new1.listFiles();
+            double max = 0;
+            String firstfile = "";
+            String secondfile = "";
+
+            System.out.print("             ");
+            for (int i = 0; i < text.length - 1; i++) {
+                System.out.print(text[i].getName() + "    ");
             }
-            scan = new Scanner(file2);
-            while (scan.hasNext()) {
-                str2 += scan.nextLine();
-            }
-            String substr = "";
-            for (int i = 0; i < str2.length(); i++) {
-                for (int j = i + 1; j <= str2.length(); j++) {
-                    if (str1.contains(str2.substring(i, j))) {
-                        if (str2.substring(i, j).length() > substr.length()) {
-                            substr = str2.substring(i, j);
-                        }
+            System.out.print(text[text.length - 1].getName() + " ");
+            System.out.println();
+            for (int i = 0; i < text.length; i++) {
+                System.out.print(text[i].getName());
+                for (int j = 0; j < text.length; j++) {
+                    SubString1 obj = new SubString1();
+                    double res = obj.plagerism(text[i], text[j]);
+
+                    if (res > max && !text[i].getName().equals(
+                        text[j].getName())) {
+                        max = res;
+                        firstfile = text[i].getName();
+                        secondfile = text[j].getName();
+
                     }
+
                 }
-            }
-            if (file1.getName().equals(file2.getName())) {
-                result = 100;
-
-                // System.out.print("\t\t");
-            } else {
-                double num = substr.length() * 2 * 100;
-                double den = str1.length() + str2.length();
-                result = Math.round(num / den);
-
+                System.out.print(" ");
+                System.out.println();
 
             }
-            System.out.format("%13.1f", result);
-
+            System.out.println("Maximum similarity is between "
+                               + firstfile + " " + "and" + " " + secondfile);
         } catch (Exception e) {
-            System.out.println("FILE NOT FOUND");
+            System.out.println("Empty Directory");
         }
-        return result;
-
     }
-
 }
